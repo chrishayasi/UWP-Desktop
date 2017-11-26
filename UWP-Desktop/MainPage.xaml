@@ -8,6 +8,8 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel></StackPanel>
+        <StackPanel>
+            <TextBlock>HelloWorld</TextBlock>
+        </StackPanel>
     </Grid>
 </Page>
