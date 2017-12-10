@@ -29,16 +29,79 @@
         </Grid.RowDefinitions>
 
         <TextBlock Grid.Column="0" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
-            ID番号
+            勤務先名
         </TextBlock>
         <TextBox Grid.Column="1" Grid.Row="0" Margin="10">
         </TextBox>
 
         <TextBlock Grid.Column="2" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
-            勤務先情報更新日
+            入社年月日
         </TextBlock>
-        <TextBox Grid.Column="4" Grid.Row="0" Margin="10">
+        <StackPanel Orientation="Horizontal"  Grid.Column="3" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10">
+            <ComboBox >
+                <x:String>1950</x:String>
+                <x:String>1951</x:String>
+                <x:String>1952</x:String>
+                <x:String>1953</x:String>
+                <x:String>1954</x:String>
+                <x:String>1955</x:String>
+                <x:String>1956</x:String>
+                <x:String>1957</x:String>
+                <x:String>1958</x:String>
+                <x:String>1959</x:String>
+                <x:String>1960</x:String>
+                <x:String>1961</x:String>
+            </ComboBox>
+            <TextBlock Text=" 年 "></TextBlock>
+
+            <ComboBox>
+                <x:String>01</x:String>
+                <x:String>02</x:String>
+                <x:String>03</x:String>
+                <x:String>04</x:String>
+                <x:String>05</x:String>
+                <x:String>06</x:String>
+                <x:String>07</x:String>
+                <x:String>08</x:String>
+                <x:String>09</x:String>
+                <x:String>10</x:String>
+                <x:String>11</x:String>
+                <x:String>12</x:String>
+            </ComboBox>
+            <TextBlock Text=" 月 "></TextBlock>
+        </StackPanel>
+
+
+        <TextBlock Grid.Column="0" Grid.Row="1"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+            勤務先部署名
+        </TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="1" Margin="10">
         </TextBox>
+
+        <TextBlock Grid.Column="0" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+            勤務先役職名
+        </TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="2" Margin="10">
+        </TextBox>
+
+        <TextBlock Grid.Column="0" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+            勤務先住所
+        </TextBlock>
+        <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Margin="10">
+        </TextBox>
+
+
+
+        <TextBlock Grid.Column="0" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+            勤務時間
+        </TextBlock>
+
+        <StackPanel Margin="10" Grid.Column="1" Grid.Row="4
+                    " Orientation="Horizontal"  VerticalAlignment="Center" Grid.ColumnSpan="3">
+            <TimePicker ></TimePicker>
+            <TextBlock Margin="50,0,50,0" Text="～"></TextBlock>
+            <TimePicker></TimePicker>
+        </StackPanel>
 
     </Grid>
 </Page>

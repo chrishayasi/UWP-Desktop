@@ -67,7 +67,7 @@
             
         </ComboBox>-->
 
-        <ComboBox Grid.Column="1" Grid.Row="4"  PlaceholderText="戸籍を選択してください。" Width="300" FontFamily="Segoe UI">
+        <ComboBox Grid.Column="1" VerticalAlignment="Center" Grid.Row="4"  PlaceholderText="戸籍を選択してください。" Width="300" FontFamily="Segoe UI">
             <x:String>1</x:String>
             <x:String>2</x:String>
             <x:String>3</x:String>

@@ -20,31 +20,16 @@ namespace UWP_Desktop
     /// <summary>
     /// それ自体で使用できる空白ページまたはフレーム内に移動できる空白ページ。
     /// </summary>
-    public sealed partial class StartupPage : Page
+    public sealed partial class PivotStylePage : Page
     {
-        public StartupPage()
+        public PivotStylePage()
         {
             this.InitializeComponent();
         }
 
-        private void BaseInfo_Click(object sender, RoutedEventArgs e)
+        private void myPivot_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            MyFrame.Navigate(typeof(BaseInfoPage));
-        }
 
-        private void EmpInfo_Click(object sender, RoutedEventArgs e)
-        {
-            MyFrame.Navigate(typeof(EmpInfoPage));
-        }
-
-        private void HomeInfo_Click(object sender, RoutedEventArgs e)
-        {
-            MyFrame.Navigate(typeof(HomeInfoPage));
-        }
-
-        private void BtnGotoPivot_Click(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(PivotStylePage));
         }
     }
 }
