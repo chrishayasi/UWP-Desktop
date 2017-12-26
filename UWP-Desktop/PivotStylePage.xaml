@@ -8,318 +8,357 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Pivot Title="" x:Name="myPivot" 
+        <ScrollViewer>
+
+            <Pivot Title="" x:Name="myPivot" 
                     SelectionChanged="myPivot_SelectionChanged">
-            <PivotItem Header="基本情報">
-                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Grid.ColumnDefinitions >
-                        <ColumnDefinition Width="auto"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
+                <PivotItem Header="基本情報" >
+                    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="auto"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
 
-                    <TextBlock Grid.Column="0" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" 
+                               Grid.Row="0"  
+                               Margin="1" 
+                               HorizontalAlignment="Center" 
+                               VerticalAlignment="Center"  >
                         ID番号
-                    </TextBlock>
+                        </TextBlock>
 
-                    <TextBox Grid.Column="1" Grid.Row="0" Margin="10">
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="0" 
+                             Margin="1"
+                             InputScope="Number">
+                        </TextBox>
 
-                    </TextBox>
-
-                    <TextBlock Grid.Column="0" Grid.Row="1"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="1"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                         氏名
-                    </TextBlock>
+                        </TextBlock>
 
-                    <TextBox Grid.Column="1" Grid.Row="1" Margin="10">
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="1" 
+                             Margin="1"
+                             InputScope="ChineseFullWidth">
 
-                    </TextBox>
+                        </TextBox>
 
-                    <TextBlock Grid.Column="0" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="2"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                         生年月日
-                    </TextBlock>
+                        </TextBlock>
 
-                    <DatePicker Grid.Column="1" Grid.Row="2" Margin="10" FontFamily="Segoe UI">
+                        <DatePicker Grid.Column="1" Grid.Row="2" Margin="1" FontFamily="Segoe UI">
 
-                    </DatePicker>
+                        </DatePicker>
 
-                    <TextBlock Grid.Column="0" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="3"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                         性別
-                    </TextBlock>
+                        </TextBlock>
 
-                    <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3">
-                        <RadioButton x:Name="Option1RadioButton" Content="男" />
-                        <RadioButton x:Name="Option2RadioButton" Content="女" />
-                    </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3">
+                            <RadioButton x:Name="Option1RadioButton" Content="男" />
+                            <RadioButton x:Name="Option2RadioButton" Content="女" />
+                        </StackPanel>
 
-                    <TextBlock Grid.Column="0" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="4"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                         戸籍
-                    </TextBlock>
+                        </TextBlock>
 
-                    <!--<ComboBox  Grid.Column="1" Grid.Row="4"　PlaceholderText="Pick a color" Width="200">
+                        <!--<ComboBox  Grid.Column="1" Grid.Row="4"　PlaceholderText="Pick a color" Width="200">
             
                     </ComboBox>-->
 
-                    <ComboBox Grid.Column="1" VerticalAlignment="Center" Grid.Row="4"  PlaceholderText="戸籍を選択してください。" Width="300" FontFamily="Segoe UI">
-                        <x:String>1</x:String>
-                        <x:String>2</x:String>
-                        <x:String>3</x:String>
-                        <x:String>4</x:String>
-                        <x:String>5</x:String>
-                        <x:String>6</x:String>
-                    </ComboBox>
+                        <ComboBox Grid.Column="1" VerticalAlignment="Center" Grid.Row="4"  PlaceholderText="戸籍を選択してください。" Width="300" FontFamily="Segoe UI">
+                            <x:String>1</x:String>
+                            <x:String>2</x:String>
+                            <x:String>3</x:String>
+                            <x:String>4</x:String>
+                            <x:String>5</x:String>
+                            <x:String>6</x:String>
+                        </ComboBox>
 
 
 
 
-                    <TextBlock Grid.Column="0" Grid.Row="5"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" FontFamily="Segoe UI" >
+                        <TextBlock Grid.Column="0" Grid.Row="5"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Segoe UI" >
                         学歴
-                    </TextBlock>
+                        </TextBlock>
 
-                    <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="5">
-                        <RadioButton x:Name="N1" Content="小学" />
-                        <RadioButton x:Name="N2" Content="中学" />
-                        <RadioButton x:Name="N3" Content="高校" />
-                        <RadioButton x:Name="N4" Content="大学" />
-                        <RadioButton x:Name="N5" Content="大学院" />
-                        <RadioButton x:Name="N6" Content="その他" />
-                    </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="5">
+                            <RadioButton x:Name="N1" Content="小学" />
+                            <RadioButton x:Name="N2" Content="中学" />
+                            <RadioButton x:Name="N3" Content="高校" />
+                            <RadioButton x:Name="N4" Content="大学" />
+                            <RadioButton x:Name="N5" Content="大学院" />
+                            <RadioButton x:Name="N6" Content="その他" />
+                        </StackPanel>
 
-                    <TextBlock Grid.Column="0" Grid.Row="6"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="6"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                         家族構成
-                    </TextBlock>
+                        </TextBlock>
 
-                    <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="6">
-                        <RadioButton  Content="独身" />
-                        <RadioButton  Content="結婚子供なし" />
-                        <RadioButton  Content="結婚子供あり" />
-                        <RadioButton  Content="離婚" />
-                        <RadioButton  Content="その他" />
-                    </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="6">
+                            <RadioButton  Content="独身" />
+                            <RadioButton  Content="結婚子供なし" />
+                            <RadioButton  Content="結婚子供あり" />
+                            <RadioButton  Content="離婚" />
+                            <RadioButton  Content="その他" />
+                        </StackPanel>
 
-                    <TextBlock Grid.Column="0" Grid.Row="7"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="7"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                         書類送付先
-                    </TextBlock>
+                        </TextBlock>
 
-                    <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="7">
-                        <RadioButton  Content="自宅" />
-                        <RadioButton  Content="勤め先" />
-                    </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="7">
+                            <RadioButton  Content="自宅" />
+                            <RadioButton  Content="勤め先" />
+                        </StackPanel>
 
-                    <TextBlock Grid.Column="0" Grid.Row="8"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="8"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                         SMS送付可否
-                    </TextBlock>
+                        </TextBlock>
 
-                    <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="8">
-                        <RadioButton  Content="可" />
-                        <RadioButton  Content="不可" />
-                    </StackPanel>
+                        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="8">
+                            <RadioButton  Content="可" />
+                            <RadioButton  Content="不可" />
+                        </StackPanel>
 
-                    <TextBlock Grid.Column="0" Grid.Row="9"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="9"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
                         個人E-Mail
-                    </TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="9" Margin="10">
+                        </TextBlock>
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="9" 
+                             Margin="1"
+                             InputScope="EmailNameOrAddress">
 
-                    </TextBox>
+                        </TextBox>
 
-                </Grid>
-            </PivotItem>
-            <PivotItem Header="勤務先情報">
-                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Grid.ColumnDefinitions >
-                        <ColumnDefinition Width="1.5*"></ColumnDefinition>
-                        <ColumnDefinition Width="2*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="1.5*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
+                    </Grid>
+                </PivotItem>
+                <PivotItem Header="勤務先情報">
+                    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
 
-                    <TextBlock Grid.Column="0" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="0"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             勤務先名
-                    </TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="0" Margin="10">
-                    </TextBox>
+                        </TextBlock>
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="0" 
+                             Margin="1"
+                             InputScope="ChineseFullWidth">
+                        </TextBox>
 
-                    <TextBlock Grid.Column="2" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="2" Grid.Row="0"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             入社年月日
-                    </TextBlock>
-                    <StackPanel Orientation="Horizontal"  Grid.Column="3" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10">
-                        <ComboBox >
-                            <x:String>1950</x:String>
-                            <x:String>1951</x:String>
-                            <x:String>1952</x:String>
-                            <x:String>1953</x:String>
-                            <x:String>1954</x:String>
-                            <x:String>1955</x:String>
-                            <x:String>1956</x:String>
-                            <x:String>1957</x:String>
-                            <x:String>1958</x:String>
-                            <x:String>1959</x:String>
-                            <x:String>1960</x:String>
-                            <x:String>1961</x:String>
-                        </ComboBox>
-                        <TextBlock Text=" 年 "></TextBlock>
+                        </TextBlock>
+                        <StackPanel Orientation="Horizontal"  Grid.Column="3" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="1">
+                            <ComboBox >
+                                <x:String>1950</x:String>
+                                <x:String>1951</x:String>
+                                <x:String>1952</x:String>
+                                <x:String>1953</x:String>
+                                <x:String>1954</x:String>
+                                <x:String>1955</x:String>
+                                <x:String>1956</x:String>
+                                <x:String>1957</x:String>
+                                <x:String>1958</x:String>
+                                <x:String>1959</x:String>
+                                <x:String>1960</x:String>
+                                <x:String>1961</x:String>
+                            </ComboBox>
+                            <TextBlock Text=" 年 "></TextBlock>
 
-                        <ComboBox>
-                            <x:String>01</x:String>
-                            <x:String>02</x:String>
-                            <x:String>03</x:String>
-                            <x:String>04</x:String>
-                            <x:String>05</x:String>
-                            <x:String>06</x:String>
-                            <x:String>07</x:String>
-                            <x:String>08</x:String>
-                            <x:String>09</x:String>
-                            <x:String>10</x:String>
-                            <x:String>11</x:String>
-                            <x:String>12</x:String>
-                        </ComboBox>
-                        <TextBlock Text=" 月 "></TextBlock>
-                    </StackPanel>
+                            <ComboBox>
+                                <x:String>01</x:String>
+                                <x:String>02</x:String>
+                                <x:String>03</x:String>
+                                <x:String>04</x:String>
+                                <x:String>05</x:String>
+                                <x:String>06</x:String>
+                                <x:String>07</x:String>
+                                <x:String>08</x:String>
+                                <x:String>09</x:String>
+                                <x:String>10</x:String>
+                                <x:String>11</x:String>
+                                <x:String>12</x:String>
+                            </ComboBox>
+                            <TextBlock Text=" 月 "></TextBlock>
+                        </StackPanel>
 
 
-                    <TextBlock Grid.Column="0" Grid.Row="1"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="1"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             勤務先部署名
-                    </TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="1" Margin="10">
-                    </TextBox>
+                        </TextBlock>
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="1" 
+                             Margin="1"
+                             InputScope="ChineseFullWidth">
+                        </TextBox>
 
-                    <TextBlock Grid.Column="0" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="2"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             勤務先役職名
-                    </TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="2" Margin="10">
-                    </TextBox>
+                        </TextBlock>
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="2" 
+                             Margin="1"
+                             InputScope="ChineseFullWidth">
+                        </TextBox>
 
-                    <TextBlock Grid.Column="0" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="3"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             勤務先住所
-                    </TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="3" Grid.ColumnSpan="3" Margin="10">
-                    </TextBox>
+                        </TextBlock>
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="3" 
+                             Grid.ColumnSpan="3" 
+                             Margin="1"
+                             InputScope="ChineseFullWidth">
+                        </TextBox>
 
 
 
-                    <TextBlock Grid.Column="0" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="4"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             勤務時間
-                    </TextBlock>
+                        </TextBlock>
 
-                    <StackPanel Margin="10" Grid.Column="1" Grid.Row="4
+                        <StackPanel Margin="1" Grid.Column="1" Grid.Row="4
                     " Orientation="Horizontal"  VerticalAlignment="Center" Grid.ColumnSpan="3">
-                        <TimePicker ></TimePicker>
-                        <TextBlock Margin="50,0,50,0" Text="～"></TextBlock>
-                        <TimePicker></TimePicker>
-                    </StackPanel>
+                            <TimePicker ></TimePicker>
+                            <TextBlock Margin="50,0,50,0" Text="～"></TextBlock>
+                            <TimePicker></TimePicker>
+                        </StackPanel>
 
-                </Grid>
+                    </Grid>
 
 
 
-            </PivotItem>
-            <PivotItem Header="自宅情報">
-                <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-                    <Grid.ColumnDefinitions >
-                        <ColumnDefinition Width="1.5*"></ColumnDefinition>
-                        <ColumnDefinition Width="2*"></ColumnDefinition>
-                        <ColumnDefinition Width="*"></ColumnDefinition>
-                        <ColumnDefinition Width="1.5*"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
+                </PivotItem>
+                <PivotItem Header="自宅情報">
+                    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                        <Grid.ColumnDefinitions >
+                            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                            <ColumnDefinition Width="2*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
 
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                        <RowDefinition Height="*"></RowDefinition>
-                    </Grid.RowDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                            <RowDefinition Height="*"></RowDefinition>
+                        </Grid.RowDefinitions>
 
-                    <TextBlock Grid.Column="0" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="0"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅郵便番号
-                    </TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="0" Margin="10">
-                    </TextBox>
+                        </TextBlock>
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="0" 
+                             Margin="1"
+                             InputScope="Number">
+                        </TextBox>
 
-                    <TextBlock Grid.Column="0" Grid.Row="1"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="1"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅住所
-                    </TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="10">
-                    </TextBox>
+                        </TextBlock>
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="1" 
+                             Grid.ColumnSpan="3" 
+                             Margin="1"
+                             InputScope="ChineseFullWidth">
+                        </TextBox>
 
-                    <TextBlock Grid.Column="0" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="2"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅エリア
-                    </TextBlock>
-                    <ComboBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" >
-                        <x:String>東区</x:String>
-                        <x:String>南区</x:String>
-                        <x:String>西区</x:String>
-                        <x:String>北区</x:String>
-                        <x:String>中央区</x:String>
-                    </ComboBox>
+                        </TextBlock>
+                        <ComboBox Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" >
+                            <x:String>東区</x:String>
+                            <x:String>南区</x:String>
+                            <x:String>西区</x:String>
+                            <x:String>北区</x:String>
+                            <x:String>中央区</x:String>
+                        </ComboBox>
 
-                    <TextBlock Grid.Column="2" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="2" Grid.Row="2"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅居住エリア
-                    </TextBlock>
-                    <ComboBox Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" >
-                        <x:String>持ち家</x:String>
-                        <x:String>賃貸</x:String>
-                    </ComboBox>
+                        </TextBlock>
+                        <ComboBox Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" >
+                            <x:String>持ち家</x:String>
+                            <x:String>賃貸</x:String>
+                        </ComboBox>
 
-                    <TextBlock Grid.Column="0" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="3"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅電話番号
-                    </TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="3"  Margin="10">
-                    </TextBox>
+                        </TextBlock>
+                        <TextBox Grid.Column="1" 
+                             Grid.Row="3"  
+                             Margin="1"
+                             InputScope="TelephoneNumber">
+                        </TextBox>
 
-                    <TextBlock Grid.Column="2" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="2" Grid.Row="3"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅電話状況
-                    </TextBlock>
-                    <ComboBox Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" >
-                        <x:String>あり</x:String>
-                        <x:String>なし</x:String>
-                    </ComboBox>
+                        </TextBlock>
+                        <ComboBox Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" >
+                            <x:String>あり</x:String>
+                            <x:String>なし</x:String>
+                        </ComboBox>
 
-                    <TextBlock Grid.Column="0" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="0" Grid.Row="4"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             携帯電話番号
-                    </TextBlock>
-                    <TextBox Grid.Column="1" Grid.Row="4"  Margin="10">
-                    </TextBox>
+                        </TextBlock>
+                        <TextBox Grid.Column="1" Grid.Row="4"  Margin="1"
+                             InputScope="TelephoneNumber">
+                        </TextBox>
 
-                    <TextBlock Grid.Column="2" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" >
+                        <TextBlock Grid.Column="2" Grid.Row="4"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             携帯電話状況
-                    </TextBlock>
-                    <ComboBox Grid.Column="3" Grid.Row="4" VerticalAlignment="Center" >
-                        <x:String>あり</x:String>
-                        <x:String>なし</x:String>
-                    </ComboBox>
+                        </TextBlock>
+                        <ComboBox Grid.Column="3" Grid.Row="4" VerticalAlignment="Center" >
+                            <x:String>あり</x:String>
+                            <x:String>なし</x:String>
+                        </ComboBox>
 
-                </Grid>
-            </PivotItem>
-        </Pivot>
+                    </Grid>
+                </PivotItem>
+            </Pivot>
+        </ScrollViewer>
     </Grid>
 </Page>
