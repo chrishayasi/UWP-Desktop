@@ -15,8 +15,8 @@
                 <PivotItem Header="基本情報" >
                     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
                         <Grid.ColumnDefinitions >
-                            <ColumnDefinition Width="auto"></ColumnDefinition>
                             <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="3*"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
                         <Grid.RowDefinitions>
@@ -33,16 +33,18 @@
                         </Grid.RowDefinitions>
 
                         <TextBlock Grid.Column="0" 
-                               Grid.Row="0"  
-                               Margin="1" 
-                               HorizontalAlignment="Center" 
-                               VerticalAlignment="Center"  >
-                        ID番号
+                                   Grid.Row="0"  
+                                   Margin="1" 
+                                   x:Uid="tbID"
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"  >
+                        
                         </TextBlock>
 
                         <TextBox Grid.Column="1" 
                              Grid.Row="0" 
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="Number">
                         </TextBox>
 
@@ -53,6 +55,7 @@
                         <TextBox Grid.Column="1" 
                              Grid.Row="1" 
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="ChineseFullWidth">
 
                         </TextBox>
@@ -143,6 +146,7 @@
                         <TextBox Grid.Column="1" 
                              Grid.Row="9" 
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="EmailNameOrAddress">
 
                         </TextBox>
@@ -177,6 +181,7 @@
                         <TextBox Grid.Column="1" 
                              Grid.Row="0" 
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="ChineseFullWidth">
                         </TextBox>
 
@@ -224,6 +229,7 @@
                         <TextBox Grid.Column="1" 
                              Grid.Row="1" 
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="ChineseFullWidth">
                         </TextBox>
 
@@ -233,6 +239,7 @@
                         <TextBox Grid.Column="1" 
                              Grid.Row="2" 
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="ChineseFullWidth">
                         </TextBox>
 
@@ -243,6 +250,7 @@
                              Grid.Row="3" 
                              Grid.ColumnSpan="3" 
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="ChineseFullWidth">
                         </TextBox>
 
@@ -292,6 +300,7 @@
                         <TextBox Grid.Column="1" 
                              Grid.Row="0" 
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="Number">
                         </TextBox>
 
@@ -302,6 +311,7 @@
                              Grid.Row="1" 
                              Grid.ColumnSpan="3" 
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="ChineseFullWidth">
                         </TextBox>
 
@@ -330,6 +340,7 @@
                         <TextBox Grid.Column="1" 
                              Grid.Row="3"  
                              Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="TelephoneNumber">
                         </TextBox>
 
@@ -344,7 +355,10 @@
                         <TextBlock Grid.Column="0" Grid.Row="4"  Margin="1" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             携帯電話番号
                         </TextBlock>
-                        <TextBox Grid.Column="1" Grid.Row="4"  Margin="1"
+                        <TextBox Grid.Column="1" 
+                                 Grid.Row="4"  
+                                 Margin="1"
+                             VerticalAlignment="Center" 
                              InputScope="TelephoneNumber">
                         </TextBox>
 
