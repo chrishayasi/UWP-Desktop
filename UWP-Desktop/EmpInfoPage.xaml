@@ -39,7 +39,7 @@
             入社年月日
         </TextBlock>
         <StackPanel Orientation="Horizontal"  Grid.Column="3" Grid.Row="0"  HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10">
-            <ComboBox >
+            <ComboBox Name="CmbYear" >
                 <x:String>1950</x:String>
                 <x:String>1951</x:String>
                 <x:String>1952</x:String>
@@ -55,7 +55,7 @@
             </ComboBox>
             <TextBlock Text=" 年 "></TextBlock>
 
-            <ComboBox>
+            <ComboBox Name="CmbMonth">
                 <x:String>01</x:String>
                 <x:String>02</x:String>
                 <x:String>03</x:String>

@@ -45,7 +45,12 @@ namespace UWP_Desktop
         private void BtnGotoPivot_Click(object sender, RoutedEventArgs e)
         {
             //this.Frame.Navigate(typeof(PivotStylePage));
+            this.blankMethod();
             MyFrame.Navigate(typeof(PivotStylePage));
+        }
+        private void blankMethod()
+        {
+            
         }
     }
 }

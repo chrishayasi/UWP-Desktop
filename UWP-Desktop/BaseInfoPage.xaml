@@ -5,6 +5,7 @@
     xmlns:local="using:UWP_Desktop"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:data="using:UWP_Desktop.Model"
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
@@ -14,6 +15,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*"></RowDefinition>
@@ -68,13 +70,25 @@
             
         </ComboBox>-->
 
-        <ComboBox Grid.Column="1" VerticalAlignment="Center" Grid.Row="4"  Margin="10"  PlaceholderText="戸籍を選択してください。" Width="300" FontFamily="Segoe UI">
-            <x:String>1</x:String>
+        <ComboBox Name="cmbKoseki" 
+                  Grid.Column="1" 
+                  VerticalAlignment="Center" 
+                  Grid.Row="4"  Margin="10"  
+                  PlaceholderText="戸籍を選択してください。"
+                  Width="300" 
+                  ItemsSource="{x:Bind KosekiList}"
+                  FontFamily="Segoe UI">
+            <!--<x:String>1</x:String>
             <x:String>2</x:String>
             <x:String>3</x:String>
             <x:String>4</x:String>
             <x:String>5</x:String>
-            <x:String>6</x:String>
+            <x:String>6</x:String>-->
+            <ComboBox.ItemTemplate>
+                <DataTemplate x:DataType="data:CmbModel">
+                    <TextBlock Text="{x:Bind CodeAndName}"></TextBlock>
+                </DataTemplate>
+            </ComboBox.ItemTemplate>
         </ComboBox>
 
 
@@ -126,9 +140,14 @@
         <TextBlock Grid.Column="0" Grid.Row="9"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             個人E-Mail
         </TextBlock>
-        <TextBox Grid.Column="1" Grid.Row="9" Margin="10">
+        <TextBox Name="txtEmail" Grid.Column="1" Grid.Row="9" Margin="10">
 
         </TextBox>
+
+        <Button  Grid.Column="0" Grid.Row="10"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" 
+            Name="btnTest" Click="btnTest_Click">
+            動作確認用
+        </Button>
 
     </Grid>
 </Page>
