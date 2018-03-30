@@ -7,84 +7,93 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions >
-            <ColumnDefinition Width="1.5*"></ColumnDefinition>
-            <ColumnDefinition Width="2*"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-            <ColumnDefinition Width="1.5*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+    <Grid>
+        <ScrollViewer 
+            VerticalScrollBarVisibility="Auto" 
+            VerticalScrollMode="Enabled" 
+            HorizontalScrollBarVisibility="Auto"
+            HorizontalScrollMode="Enabled"
+            Padding="20" >
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="2*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="1.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="10"></RowDefinition>
-        </Grid.RowDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="10"></RowDefinition>
+                </Grid.RowDefinitions>
 
-        <TextBlock Grid.Column="0" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock Grid.Column="0" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅郵便番号
-        </TextBlock>
-        <TextBox Grid.Column="1" Grid.Row="0" Margin="10">
-        </TextBox>
+                </TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="0" Margin="10">
+                </TextBox>
 
-        <TextBlock Grid.Column="0" Grid.Row="1"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock Grid.Column="0" Grid.Row="1"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅住所
-        </TextBlock>
-        <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="10">
-        </TextBox>
+                </TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="3" Margin="10">
+                </TextBox>
 
-        <TextBlock Grid.Column="0" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock Grid.Column="0" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅エリア
-        </TextBlock>
-        <ComboBox Grid.Column="1" Grid.Row="2"  Margin="10" VerticalAlignment="Center" >
-            <x:String>東区</x:String>
-            <x:String>南区</x:String>
-            <x:String>西区</x:String>
-            <x:String>北区</x:String>
-            <x:String>中央区</x:String>
-        </ComboBox>
+                </TextBlock>
+                <ComboBox Grid.Column="1" Grid.Row="2"  Margin="10" VerticalAlignment="Center" >
+                    <x:String>東区</x:String>
+                    <x:String>南区</x:String>
+                    <x:String>西区</x:String>
+                    <x:String>北区</x:String>
+                    <x:String>中央区</x:String>
+                </ComboBox>
 
-        <TextBlock Grid.Column="2" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock Grid.Column="2" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅居住エリア
-        </TextBlock>
-        <ComboBox Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" >
-            <x:String>持ち家</x:String>
-            <x:String>賃貸</x:String>
-        </ComboBox>
+                </TextBlock>
+                <ComboBox Grid.Column="3" Grid.Row="2" VerticalAlignment="Center" >
+                    <x:String>持ち家</x:String>
+                    <x:String>賃貸</x:String>
+                </ComboBox>
 
-        <TextBlock Grid.Column="0" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock Grid.Column="0" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅電話番号
-        </TextBlock>
-        <TextBox Grid.Column="1" Grid.Row="3"  Margin="10">
-        </TextBox>
+                </TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="3"  Margin="10">
+                </TextBox>
 
-        <TextBlock Grid.Column="2" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock Grid.Column="2" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             自宅電話状況
-        </TextBlock>
-        <ComboBox Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" >
-            <x:String>あり</x:String>
-            <x:String>なし</x:String>
-        </ComboBox>
+                </TextBlock>
+                <ComboBox Grid.Column="3" Grid.Row="3" VerticalAlignment="Center" >
+                    <x:String>あり</x:String>
+                    <x:String>なし</x:String>
+                </ComboBox>
 
-        <TextBlock Grid.Column="0" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock Grid.Column="0" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             携帯電話番号
-        </TextBlock>
-        <TextBox Grid.Column="1" Grid.Row="4"  Margin="10">
-        </TextBox>
+                </TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="4"  Margin="10">
+                </TextBox>
 
-        <TextBlock Grid.Column="2" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                <TextBlock Grid.Column="2" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
             携帯電話状況
-        </TextBlock>
-        <ComboBox Grid.Column="3" Grid.Row="4" VerticalAlignment="Center" >
-            <x:String>あり</x:String>
-            <x:String>なし</x:String>
-        </ComboBox>
+                </TextBlock>
+                <ComboBox Grid.Column="3" Grid.Row="4" VerticalAlignment="Center" >
+                    <x:String>あり</x:String>
+                    <x:String>なし</x:String>
+                </ComboBox>
 
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>

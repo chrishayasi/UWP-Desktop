@@ -50,7 +50,7 @@ namespace UWP_Desktop
                 selectedValue = ((CmbModel)this.cmbKoseki.SelectedValue).Code;
             }
 
-            this.txtEmail.Text = selectedValue;
+            //this.txtEmail.Text = selectedValue;
         }
 
         private void btnTest_Click(object sender, RoutedEventArgs e)

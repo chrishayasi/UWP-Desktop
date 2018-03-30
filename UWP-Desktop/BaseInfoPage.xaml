@@ -7,147 +7,168 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:UWP_Desktop.Model"
     mc:Ignorable="d">
+    <Grid>
+        <ScrollViewer VerticalScrollBarVisibility="Auto" VerticalScrollMode="Enabled" Padding="20" >
+            <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+                <Grid.ColumnDefinitions >
+                    <ColumnDefinition Width="auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Grid.ColumnDefinitions >
-            <ColumnDefinition Width="auto"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="10"></RowDefinition>
+                </Grid.RowDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="10"></RowDefinition>
-        </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                ID番号
+                </TextBlock>
 
-        <TextBlock Grid.Column="0" Grid.Row="0"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-            ID番号
-        </TextBlock>
+                <TextBox Grid.Column="1" Grid.Row="0" Margin="10">
 
-        <TextBox Grid.Column="1" Grid.Row="0" Margin="10">
+                </TextBox>
+
+                <TextBlock Grid.Column="0" Grid.Row="1"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                氏名
+                </TextBlock>
+
+                <TextBox Grid.Column="1" Grid.Row="1" Margin="10">
+
+                </TextBox>
+
+                <TextBlock Grid.Column="0" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                生年月日
+                </TextBlock>
+
+                <DatePicker Grid.Column="1" Grid.Row="2" Margin="10" FontFamily="Segoe UI">
+
+                </DatePicker>
+
+                <TextBlock Grid.Column="0" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                性別
+                </TextBlock>
+
+                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3"  Margin="10" >
+                    <RadioButton x:Name="Option1RadioButton" Content="男" />
+                    <RadioButton x:Name="Option2RadioButton" Content="女" />
+                </StackPanel>
+
+                <TextBlock Grid.Column="0" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                戸籍
+                </TextBlock>
+
+                <!--<ComboBox  Grid.Column="1" Grid.Row="4"　PlaceholderText="Pick a color" Width="200">
             
-        </TextBox>
+            </ComboBox>-->
 
-        <TextBlock Grid.Column="0" Grid.Row="1"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-            氏名
-        </TextBlock>
-
-        <TextBox Grid.Column="1" Grid.Row="1" Margin="10">
-
-        </TextBox>
-
-        <TextBlock Grid.Column="0" Grid.Row="2"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-            生年月日
-        </TextBlock>
-
-        <DatePicker Grid.Column="1" Grid.Row="2" Margin="10" FontFamily="Segoe UI">
-            
-        </DatePicker>
-
-        <TextBlock Grid.Column="0" Grid.Row="3"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-            性別
-        </TextBlock>
-
-        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="3"  Margin="10" >
-            <RadioButton x:Name="Option1RadioButton" Content="男" />
-            <RadioButton x:Name="Option2RadioButton" Content="女" />
-        </StackPanel>
-
-        <TextBlock Grid.Column="0" Grid.Row="4"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-            戸籍
-        </TextBlock>
-
-        <!--<ComboBox  Grid.Column="1" Grid.Row="4"　PlaceholderText="Pick a color" Width="200">
-            
-        </ComboBox>-->
-
-        <ComboBox Name="cmbKoseki" 
-                  Grid.Column="1" 
-                  VerticalAlignment="Center" 
-                  Grid.Row="4"  Margin="10"  
-                  PlaceholderText="戸籍を選択してください。"
-                  Width="300" 
-                  ItemsSource="{x:Bind KosekiList}"
-                  FontFamily="Segoe UI">
-            <!--<x:String>1</x:String>
-            <x:String>2</x:String>
-            <x:String>3</x:String>
-            <x:String>4</x:String>
-            <x:String>5</x:String>
-            <x:String>6</x:String>-->
-            <ComboBox.ItemTemplate>
-                <DataTemplate x:DataType="data:CmbModel">
-                    <TextBlock Text="{x:Bind CodeAndName}"></TextBlock>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
+                <ComboBox Name="cmbKoseki" 
+                      Grid.Column="1" 
+                      VerticalAlignment="Center" 
+                      Grid.Row="4"  Margin="10"  
+                      PlaceholderText="戸籍を選択してください。"
+                      Width="300" 
+                      ItemsSource="{x:Bind KosekiList}"
+                      FontFamily="Segoe UI">
+                    <!--<x:String>1</x:String>
+                <x:String>2</x:String>
+                <x:String>3</x:String>
+                <x:String>4</x:String>
+                <x:String>5</x:String>
+                <x:String>6</x:String>-->
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate x:DataType="data:CmbModel">
+                            <TextBlock Text="{x:Bind CodeAndName}"></TextBlock>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
 
 
 
 
-        <TextBlock Grid.Column="0" Grid.Row="5"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Segoe UI" >
-            学歴
-        </TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="5"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="Segoe UI" >
+                学歴
+                </TextBlock>
 
-        <StackPanel Orientation="Horizontal"  Margin="10" Grid.Column="1" Grid.Row="5">
-            <RadioButton x:Name="N1" Content="小学" />
-            <RadioButton x:Name="N2" Content="中学" />
-            <RadioButton x:Name="N3" Content="高校" />
-            <RadioButton x:Name="N4" Content="大学" />
-            <RadioButton x:Name="N5" Content="大学院" />
-            <RadioButton x:Name="N6" Content="その他" />
-        </StackPanel>
+                <StackPanel Orientation="Horizontal"  Margin="10" Grid.Column="1" Grid.Row="5">
+                    <RadioButton x:Name="N1" Content="小学" />
+                    <RadioButton x:Name="N2" Content="中学" />
+                    <RadioButton x:Name="N3" Content="高校" />
+                    <RadioButton x:Name="N4" Content="大学" />
+                    <RadioButton x:Name="N5" Content="大学院" />
+                    <RadioButton x:Name="N6" Content="その他" />
+                </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="6"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-            家族構成
-        </TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="6"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                家族構成
+                </TextBlock>
 
-        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="6" Margin="10" >
-            <RadioButton  Content="独身" />
-            <RadioButton  Content="結婚子供なし" />
-            <RadioButton  Content="結婚子供あり" />
-            <RadioButton  Content="離婚" />
-            <RadioButton  Content="その他" />
-        </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="6" Margin="10" >
+                    <RadioButton  Content="独身" />
+                    <RadioButton  Content="結婚子供なし" />
+                    <RadioButton  Content="結婚子供あり" />
+                    <RadioButton  Content="離婚" />
+                    <RadioButton  Content="その他" />
+                </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="7"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-            書類送付先
-        </TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="7"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                書類送付先
+                </TextBlock>
 
-        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="7" Margin="10" >
-            <RadioButton  Content="自宅" />
-            <RadioButton  Content="勤め先" />
-        </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="7" Margin="10" >
+                    <RadioButton  Content="自宅" />
+                    <RadioButton  Content="勤め先" />
+                </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="8"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-            SMS送付可否
-        </TextBlock>
+                <TextBlock Grid.Column="0" Grid.Row="8"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                SMS送付可否
+                </TextBlock>
 
-        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="8" Margin="10" >
-            <RadioButton  Content="可" />
-            <RadioButton  Content="不可" />
-        </StackPanel>
+                <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="8" Margin="10" >
+                    <RadioButton  Content="可" />
+                    <RadioButton  Content="不可" />
+                </StackPanel>
 
-        <TextBlock Grid.Column="0" Grid.Row="9"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
-            個人E-Mail
-        </TextBlock>
-        <TextBox Name="txtEmail" Grid.Column="1" Grid.Row="9" Margin="10">
+                <TextBlock Grid.Column="0" Grid.Row="9"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center"  >
+                居住年数
+                </TextBlock>
+                
+                <StackPanel Grid.Column="1" Grid.Row="9" Margin="10" Orientation="Horizontal">
+                    <Slider x:Name="redSlider" 
+                            Grid.Column="0" 
+                            Grid.Row="1" 
+                            Width="250" 
+                            Value="{x:Bind Path=txbLiveYears.Text,Mode=TwoWay}"
+                            Minimum="0" 
+                            Maximum="60" 
+                            Margin="30,0"/>
 
-        </TextBox>
+                    <TextBlock x:Name="txbLiveYears" 
+                             Margin="30,0" 
+                             MaxWidth="100" 
+                             Text="0"
+                             TextAlignment="Right">
+                        
+                    </TextBlock>
+                </StackPanel>
+                
+                
 
-        <Button  Grid.Column="0" Grid.Row="10"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" 
-            Name="btnTest" Click="btnTest_Click">
-            動作確認用
-        </Button>
+                <Button  Grid.Column="0" Grid.Row="10"  Margin="10" HorizontalAlignment="Center" VerticalAlignment="Center" 
+                Name="btnTest" Click="btnTest_Click">
+                    動作確認用
+                </Button>
 
+            </Grid>
+        </ScrollViewer>
     </Grid>
 </Page>
